@@ -1,0 +1,53 @@
+<h2>这是一个home组件</h2>
+<br>
+
+{{msg}}
+
+<br>
+
+<button (click)='getMsg()'>执行方法</button>
+<hr>
+<br>
+
+{{username}}
+<br>
+<button (click)='setName()'>改变username值</button>
+<hr>
+
+<!-- 条件判断语句 -->
+<div *ngIf='flag'>flag=true的情况显示</div>
+<br>
+<button (click)='flag=!flag'>执行方法改变flag值</button>
+<hr>
+
+<input type="text"  (keyup)='keyupFn($event)'>
+<br>
+<br>
+<button (click)='run($event)'>事件对象</button>
+
+<br>
+<br>
+<!-- 双向数据绑定 -->
+<input type="text" [(ngModel)]='search'>
+
+{{search}}
+
+<br><br>
+<button (click)='getSearch()'>获取inpur值</button>
+
+<hr>
+<!-- todolist功能 -->
+<input type="text" [(ngModel)]='name'>
+<br>
+<button (click)='addData()'>增加</button>
+<br>
+<ul>
+  <li *ngFor='let item of list'>
+    {{item}}
+  </li>
+</ul>
+<hr>
+
+
+
+
